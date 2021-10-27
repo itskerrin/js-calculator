@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root {
+  /* Main theme */
+  --main-bg-desat-blue: hsl(222, 26%, 31%);
+  --main-bg-desat-blue-toggle: hsl(223, 31%, 20%);
+  --main-bg-vdark-blue: hsl(224, 36%, 15%);
+  --main-key-dark-bg: hsl(225, 21%, 49%);
+  --main-key-dark-shadow: hsl(224, 28%, 35%);
+  --main-key-red-bg: hsl(6, 63%, 50%);
+  --main-key-darkred-toggle: hsl(6, 70%, 34%);
+  --main-key-lgray-orange: hsl(30, 25%, 89%);
+  --main-key-gray-orange: hsl(28, 16%, 65%);
+  --main-text-gray-blue: hsl(221, 14%, 31%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg-desat-blue);
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  color: white;
+  padding-left: 10%;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}
+
+#calc-display {
+  background-color: var(--main-bg-vdark-blue);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 1vh;
+  width: 80%;
+  min-height: 52px;
+  border-radius: 10px;
+  padding: 0 15px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.current {
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.previous {
+  color: rgb(153, 153, 153);
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+section {
+  background-color: var(--main-bg-vdark-blue);
+  width: 80%;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+#calc-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 11px;
+}
+
+#calc-grid > button {
+  height: 55px;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Spartan', sans-serif;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: var(--main-key-lgray-orange);
+  color: var(--main-text-gray-blue);
+  box-shadow: 1px 3px 0 0 var(--main-key-gray-orange);
+}
+
+#del {
+  background-color: var(--main-key-dark-bg);
+  box-shadow: 1px 3px 0 0 var(--main-key-dark-shadow);
+  color: white;
+}
+
+#reset {
+  grid-column: span 2;
+  background-color: var(--main-key-dark-bg);
+  box-shadow: 1px 3px 0 0 var(--main-key-dark-shadow);
+  color: white;
+}
+
+#equals {
+  grid-column: span 2;
+  background-color: var(--main-key-red-bg);
+  box-shadow: 1px 3px 0 0 var(--main-key-darkred-toggle);
+  color: white;
+}
+
+/* Tablet */
+
+/* Desktop */
