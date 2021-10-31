@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" minimum-scale="1" />
     <link
       rel="icon"
       type="image/png"
@@ -14,12 +14,20 @@
     <title>Frontend Mentor Challenge | Calculator app</title>
   </head>
   <body>
-    <h1 id="header">calc</h1>
-
+    
     <!-- Calcuator -->
     <main>
+      <h1 id="header">calc</h1>
+      <!-- theme toggle -->
+      <div class="calc-toggle">
+        <div class="toggle-btn">
+          <div data-theme="1" class="toggle-check"></div>
+          <div data-theme="2" class="toggle-check"></div>
+          <div data-theme="3" class="toggle-check"></div>
+        </div>
+      </div>
+      <!-- number display -->
       <div id="calc-display">
-        <!-- number display -->
           <div data-previous class="previous"></div>
           <div data-current class="current"></div>
       </div>

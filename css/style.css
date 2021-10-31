@@ -28,13 +28,14 @@ body {
 
 #header {
   color: white;
-  padding-left: 10%;
+  justify-self: start;
+  padding-left: 12%;
 }
 
 main {
   display: grid;
   place-items: center;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 #calc-display {
@@ -43,9 +44,9 @@ main {
   align-items: flex-end;
   justify-content: space-around;
   flex-direction: column;
-  margin-bottom: 1vh;
-  width: 80%;
-  min-height: 52px;
+  margin-bottom: 4%;
+  width: 76vw;
+  min-height: 65px;
   border-radius: 10px;
   padding: 0 15px;
   word-wrap: break-word;
@@ -65,8 +66,9 @@ main {
 }
 
 section {
-  background-color: var(--main-bg-vdark-blue);
-  width: 80%;
+  background-color: var(--main-bg-desat-blue-toggle);
+  /* width: 80%; */
+  width: 76vw;
   padding: 5%;
   border-radius: 10px;
 }
@@ -116,6 +118,39 @@ button {
   color: white;
 }
 
-/* Tablet */
+/* Larger screens */
 
-/* Desktop */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1600px) {
+  main {
+    margin-top: 100px;
+  }
+
+  section {
+    width: 60%;
+    padding: 2%;
+  }
+
+  #header {
+    justify-self: start;
+    padding-left: 20%;
+  }
+
+  #calc-display {
+    width: 60%;
+    min-height: 90px;
+    margin-bottom: 20px;
+  }
+
+  #calc-grid {
+    display: grid;
+    grid-gap: 15px;
+  }
+
+  #calc-grid > button {
+    height: 50px;
+  }
+
+  .btn {
+    font-size: 20px !important;
+  }
+}
